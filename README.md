@@ -1,4 +1,4 @@
-# Knexyce-Script-to-Install-TOR
+# Knexyce Script to Install TOR
 Installs TOR remotely.
 
 To use the code:
