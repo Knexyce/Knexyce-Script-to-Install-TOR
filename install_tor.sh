@@ -1,6 +1,7 @@
 
 #!/bin/bash
 #Script to install and run TOR Browser.
+
 sudo apt-get -y update
 sudo apt-get -y upgrade
 
@@ -23,8 +24,8 @@ echo " "
 echo "Installing and activating TOR Browser using a Knexyce TOR Script."
 echo "Please do not close the terminal. This is to prevent errors."
 echo "This script is designed for Linux and some Bash systems."
-echo " "
 
+echo " "
 base_url="https://www.torproject.org/dist/torbrowser/"
 tmp_file="tor_browser_version.txt"
 latest_tarball="tor-browser-linux-x86_64-latest.tar.xz"
@@ -32,8 +33,8 @@ curl -s https://www.torproject.org/download/ | grep -oP 'href="\Ktorbrowser[^"]+
 version=$(cat $tmp_file)
 latest_url="${base_url}${version}/tor-browser-linux-x86_64-${version}.tar.xz"
 rm $tmp_file
-echo " "
 
+echo " "
 wget -O $latest_tarball "$latest_url"
 tar -xvJf $latest_tarball
 rm $latest_tarball
