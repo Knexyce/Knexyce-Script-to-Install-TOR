@@ -3,7 +3,7 @@
 
 What is TOR/TOR Browser?
 
-TOR Browser is a browser that allows you to anonymously browse the Internet with more security. It also allows you to access sites and information that is normally hidden from the rest of the Internet TOR Browser also has multiple layers of encryption to protect privacy and a feature called NoScript to protect you from being hacked. Keep in mind that this browser is in the Deep Web and is often called the Dark Web. Be cautious when using it and remember to have as much security as possible before connecting to your Wi-Fi/Ethernet/etc. if you intend to use this browser.
+TOR Browser is a browser that allows you to anonymously browse the Internet with more security. It also allows you to access sites and information that is normally hidden from the rest of the Internet. TOR Browser also has multiple layers of encryption to protect privacy and a feature called NoScript to protect you from being hacked. Keep in mind that this browser is in the Deep Web and is often called the Dark Web. Be cautious when using it and remember to have as much security as possible before connecting to your Wi-Fi/Ethernet/etc. if you intend to use this browser.
 
 # Requirements
 1. A Linux-based operating system (Debian/Ubuntu/ChromeOS/etc. recommended)
