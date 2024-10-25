@@ -3,8 +3,6 @@
 #Script to install and run TOR Browser.
 
 sudo apt-get -y update
-sudo apt-get -y upgrade
-
 sudo apt-get install -y coreutils
 sudo apt-get install -y curl
 sudo apt-get install -y grep
@@ -12,35 +10,25 @@ sudo apt-get install -y wget
 sudo apt-get install -y tar
 sudo apt-get install -y xz-utils
 sudo apt-get install -y xdg-utils
-
-sudo apt-get install -y libdbus-glib-1-2
-sudo apt-get install -y torbrowser-launcher
-sudo apt-get install -y gnupg2
-sudo apt-get install -y libgtk-3-0
-sudo apt-get install -y libevent-2.1-7
-sudo apt-get install -y tor
+sudo apt-get -y upgrade
 
 echo " "
 echo "Installing and activating TOR Browser using a Knexyce TOR Script."
 echo "Please do not close the terminal. This is to prevent errors."
 echo "This script is designed for Linux and some Bash systems."
-
 echo " "
+
+latest_version=$(curl -s https://gitlab.torproject.org/tpo/web/tpo/-/raw/main/databags/versions.ini | grep -A1 '\[torbrowser-linux-stable\]' | grep -oP '(?<=version = ).*')
 base_url="https://www.torproject.org/dist/torbrowser/"
-tmp_file="tor_browser_version.txt"
-latest_tarball="tor-browser-linux-x86_64-latest.tar.xz"
-curl -s https://www.torproject.org/download/ | grep -oP 'href="\Ktorbrowser[^"]+' | grep -oP '\d+\.\d+\.\d+' | head -1 > $tmp_file
-version=$(cat $tmp_file)
-latest_url="${base_url}${version}/tor-browser-linux-x86_64-${version}.tar.xz"
-rm $tmp_file
-
+latest_tarball="tor-browser-linux-x86_64-$latest_version.tar.xz"
+wget "${base_url}${latest_version}/${latest_tarball}"
+echo "Downloaded: $latest_tarball"
 echo " "
-wget -O $latest_tarball "$latest_url"
 tar -xvJf $latest_tarball
 rm $latest_tarball
 echo " "
 ls -d tor-browser*
-cd "tor-browser_'${version}'"
+cd "tor-browser_'${latest_version}'"
 cd "tor-browser"
 cd tor-browser*
 echo " "
