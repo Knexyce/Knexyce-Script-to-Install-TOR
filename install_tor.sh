@@ -22,18 +22,13 @@ latest_version=$(curl -s https://gitlab.torproject.org/tpo/web/tpo/-/raw/main/da
 base_url="https://www.torproject.org/dist/torbrowser/"
 latest_tarball="tor-browser-linux-x86_64-$latest_version.tar.xz"
 wget "${base_url}${latest_version}/${latest_tarball}"
-echo "Downloaded: $latest_tarball"
-echo " "
 tar -xvJf $latest_tarball
 rm $latest_tarball
-echo " "
 ls -d tor-browser*
-cd "tor-browser_'${latest_version}'"
-cd "tor-browser"
-cd tor-browser*
-echo " "
+cd tor-browser
 chmod +x start-tor-browser.desktop
 ./start-tor-browser.desktop
+cd ..
 
 echo " "
 echo "TOR Browser successfully installed and launched by Knexyce."
