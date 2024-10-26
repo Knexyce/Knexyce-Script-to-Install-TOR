@@ -32,14 +32,13 @@ chmod +x start-tor-browser.desktop
 cd ..
 
 echo " "
-echo "TOR Browser successfully installed and launched by Knexyce."
+echo "TOR Browser installed and launched by a Knexyce code script, (install_tor.sh)."
 echo " "
 echo "If TOR Browser has not been installed and/or launched as intended: "
 echo "If TOR Browser has not been installed correctly, there may be a system error or the terminal may have been closed while the script was running."
 echo "If TOR Browser has not launched, there may be an error with script or the current system that is executing this script."
-echo "This script is designed to install '${latest_tarball}' and launch it on Linux or some Bash systems."
-echo "There may be a newer version of TOR if there is a download error."
-echo "If any errors occured while navigating to the TOR Browser directory: It is likely not an issue as long as you are in the correct directory as of now while this message is displaying."
+echo "This script is designed to install and launch '${latest_tarball}' on Linux/GNU and/or some Bash systems."
+echo "A reason for errors or malfunctions might be due to missing dependencies."
 echo "Another reason the script may have not worked is if you have ran out of space for the script to function as intended."
 echo "Check https://www.torproject.org/ for more info."
 echo "You may now close the terminal."
