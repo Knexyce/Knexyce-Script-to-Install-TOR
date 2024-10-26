@@ -18,6 +18,7 @@ echo "Please do not close the terminal. This is to prevent errors."
 echo "This script is designed for Linux and some Bash systems."
 echo " "
 
+rm -vfr tor-browser
 latest_version=$(curl -s https://gitlab.torproject.org/tpo/web/tpo/-/raw/main/databags/versions.ini | grep -A1 '\[torbrowser-linux-stable\]' | grep -oP '(?<=version = ).*')
 base_url="https://www.torproject.org/dist/torbrowser/"
 latest_tarball="tor-browser-linux-x86_64-$latest_version.tar.xz"
